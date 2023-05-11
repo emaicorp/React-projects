@@ -10,8 +10,17 @@ export default function App(){
     return(
         <div>
              <Header/>
-             <Hero/>
-            <About/>
+               <Hero/>
+     <div>
+        <About
+        img="hi\src\images\airbnb-logo.png"
+        p1= "hello world"
+        p2 = "react is great"
+        />
+     </div>
+      
+
+            
             <Interest/>
             <Footer/>
        

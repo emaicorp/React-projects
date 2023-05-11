@@ -1,30 +1,24 @@
 import React from "react";
-import img from "./images/katie-zaferes.png";
-import img1 from "./images/katie-zaferes.png";
-import img2 from "./images/katie-zaferes.png";
-import img3 from "./images/star.png";
+import img from "./images/katie-zaferes.png"
 
+ export default function About(props){
 
- export default function About(){
-   const card = (
+   console.log(props)
+    return(
+       
       <section className="card">
-        <img src={img}/>
+        <img src = {props.img}/>
         <div className="card--stats">
-            <img src={img3}/>
-            <span >5.0</span>
-            <span className="gray">(6).</span>
-            <span className="gray">USA</span>
+            <img src={props.img2}/>
+            <span >{props.span1}</span>
+            <span className="gray">{props.span2}</span>
+            <span className="gray">{props.span3}</span>
         </div>
-        <p>Life Lessons with Katie Zaferes</p>
-        <p><span className="bold">From $136</span> / Person</p>
+        <p>{props.p1}</p>
+        <p><span className="bold">{props.span4}</span>{props.p2}</p>
       
 
        </section>
-   )
-    return(
-       <div className="card-div">
-         {card}
-         {card}
-       </div>
+ 
     )
  }
