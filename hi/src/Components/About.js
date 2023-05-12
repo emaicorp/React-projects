@@ -1,22 +1,33 @@
 import React from "react";
-import img from "./images/katie-zaferes.png"
+
 
  export default function About(props){
 
-   console.log(props)
+   console.log(props) 
+  let badgeText
+  if (props.openSpots === 0) {
+    badgeText = "SOLD OUT"
+  }else if(props.location === "Online"){
+    badgeText ="ONLINE"
+  }
+
+
     return(
        
       <section className="card">
+       {badgeText && <div className="card--badge">{badgeText}</div>}
+   
         <img src = {props.img}/>
         <div className="card--stats">
-            <img src={props.img2}/>
-            <span >{props.span1}</span>
-            <span className="gray">{props.span2}</span>
-            <span className="gray">{props.span3}</span>
+        <img src = {props.ratingStar}/>
+            <span >{props.rating}</span>
+            <span className="gray">{props.reviewCount}</span>
+            <span className="gray">{props.country}</span>
         </div>
-        <p>{props.p1}</p>
-        <p><span className="bold">{props.span4}</span>{props.p2}</p>
-      
+        <p className="class--title">{props.title}</p>
+        <p className="card--price"><span className="bold">{props.price}</span>{props.person}</p>
+    
+
 
        </section>
  
